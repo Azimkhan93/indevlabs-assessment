@@ -1,18 +1,18 @@
 function validateInput(array){
   if(!Array.isArray(array)){
-    console.error('The argument should be an array')
+    console.log('The argument should be an array')
     return false
   }
 
   for(const element of array){
     if(typeof element !== 'number' || element < 0){
-      console.error('Elements of array should be 0 or positive number');
+      console.log('Elements of array should be 0 or positive number');
       return false;
     }
   }
 
   if(array.length < 2){
-    console.error('Array should contain more than 1 element')
+    console.log('Array should contain more than 1 element')
     return false
   }
 return true;
@@ -35,7 +35,7 @@ function findMissing(array){
     for(let i=0; i < sortedArr.length; i++){
       if(val !== sortedArr[i]){
         console.log(val)
-        break;
+        return val;
       } 
       
       val++
@@ -44,12 +44,7 @@ function findMissing(array){
   }
 }
 
+findMissing([5,0,1,3,2]);
+findMissing([7, 9,10, 11, 12]);
 
-findMissing('a');
-findMissing(['a']);
-findMissing(['a', 'b', 'c']);
-findMissing([4, 'a', 'b']);
-findMissing([4]);
-findMissing([4,5]);
-findMissing([4,5,6]);
-findMissing([4,6]);
+module.exports = findMissing;
