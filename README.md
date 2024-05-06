@@ -3,7 +3,7 @@
 ## Downloading
 
 ```
-git clone https://github.com/Azimkhan93/nodejs2024Q1-service.git
+git clone https://github.com/Azimkhan93/indevlabs-assessment.git
 ```
 
 ## Route to project folder
